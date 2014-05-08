@@ -2,7 +2,7 @@
 
 (print ">>> Building system....")
 
-(load (merge-pathnames "example.asd" *build-dir*))
+(load (make-pathname :directory *build-dir* :defaults "example.asd"))
 
 (ql:quickload :example)
 
